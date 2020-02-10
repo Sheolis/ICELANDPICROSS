@@ -304,34 +304,57 @@
 				<div class="case" id="15_15"></div>
 			</div>
 		</div> <!-- grille de jeu-->
-		<p id='erreurs'><b>Nombre d'erreurs : </b><span id='score'>0</span></p>
-		<div id='menu'>
-						<button class='bouton_choix' id='dessin_0'>DESSIN 1</button>
-						<button class='bouton_choix' id='dessin_1'>DESSIN 2</button>
-						<button class='bouton_choix' id='dessin_2'>DESSIN 3</button>
-						<button class='bouton_choix' id='dessin_3'>DESSIN 4</button>
-						<button class='bouton_choix' id='dessin_4'>DESSIN 5</button>
-						<button class='bouton_choix' id='dessin_5'>DESSIN 6</button>
-			</div>
-		<p> <b>Clic droit :</b> mettre une note/changer la note/enlever la note sur une case sans la valider. <br>
-				<b>Clic gauche :</b> valider une case, elle tourne au saumon si elle est fausse, pas de retour en arrière. <br>
-				<b>-15-</b> signifie "quinze" et non "un cinq". <br>
-				<b>Clic droit sur une des liste de nombres</b> :  mettre une note/enlever la note.
-		</p>
 	</div>
+	<div id="partie_texte">
+			<p id='erreurs'><b>Nombre d'erreurs : </b><span id='score'>0</span></p>
+			<div id='menu'>
+							<button class='bouton_choix' id='dessin_0'>DESSIN 1</button>
+							<button class='bouton_choix' id='dessin_1'>DESSIN 2</button>
+							<button class='bouton_choix' id='dessin_2'>DESSIN 3</button>
+							<button class='bouton_choix' id='dessin_3'>DESSIN 4</button>
+							<button class='bouton_choix' id='dessin_4'>DESSIN 5</button>
+							<button class='bouton_choix' id='dessin_5'>DESSIN 6</button>
+			</div>
+			<p> <b>Comment jouer</b></br>Un dessin se cache dans la grille. Vous devez trouver les bonnes cases(noires), qui formeront le dessin, en évitant les mauvaises(rouges)! </br>Indentifiez-les en vous aidant des chiffres sur les côtés. </br>Si il y a "3 2 4" cela signifie que sur la ligne ou colonne il y a un bloc de 3 bonnes cases puis un bloc de 2 et un bloc de 4. Tous les blocs sont séparés d'au moins une mauvaise case. </br>Faites le moins d'erreurs possible! Aidez vous du clic droit de la souris pour mettre des notes sur la grille.</br></br>Exemple d'une ligne complète:</p>
+			<div id='exemple'>
+				<div class="hinfo" id="annotationH1">1232</div>
+				<div id="exemple_ligne">
+					<div class="case correct" id="exemple_case_1"></div>
+					<div class="case" id="exemple_case_2"></div>
+					<div class="case" id="exemple_case_3"></div>
+					<div class="case" id="exemple_case_4"></div>
+					<div class="case correct" id="exemple_case_5"></div>
+					<div class="case correct" id="exemple_case_6"></div>
+					<div class="case" id="exemple_case_7"></div>
+					<div class="case" id="exemple_case_8"></div>
+					<div class="case correct" id="exemple_case_9"></div>
+					<div class="case correct" id="exemple_case_10"></div>
+					<div class="case correct" id="exemple_case_11"></div>
+					<div class="case" id="exemple_case_12"></div>
+					<div class="case" id="exemple_case_13"></div>
+					<div class="case correct" id="exemple_case_14"></div>
+					<div class="case correct" id="exemple_case_15"></div>
+				</div>
+			</div>
+			<p> <b>Clic droit :</b> mettre une note/changer la note/enlever la note sur une case sans la valider. <br>
+					<b>Clic gauche :</b> valider une case, elle devient rouge si elle est fausse, pas de retour en arrière. <br>
+					<b>-15-</b> signifie "quinze" et non "un, cinq". <br>
+					<b>Clic droit sur une des liste de nombres</b> :  mettre une note/enlever la note.
+			</p>
 
 
-	<div id='stock_image'>
-		<canvas id='traitement_img'></canvas>
-		<image id='dog' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAe0lEQVQokaVS0QoAIQjb5P7/l72XM5Y1uEiIci1dKjIzAYxVvtuVx++AMpJQ3+EkEZ20e+jwyEyQnCKqv8NKxZL5xJhO5w97bFSR6eLHjlwParmgocCucB3TfZHdFThsZD6tWfEn2XrR/9ynC5BWFVAkV20d06s+X03YCxGXbP4lGIHVAAAAAElFTkSuQmCC'>
-		<image id='source' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAKElEQVQokWNkZmb+/+fPHwZyAOP/////k6WTgYGBiVyNo5pHNQ9nzQCgDwgVpkxwIgAAAABJRU5ErkJggg=='>
-		<image id='lapin' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAgklEQVQokZ1SQQ7DMAwCa/9/ctihy2QzpnTjUtnGQJMQgPAnCgAkQTprOI9X73dzkpezN7/VPqsRg4SkN6nXKd1wdmKvu+DGozv0hS6YIg/ntHA6SOJ1z+7oSAmqD07fW7FjRBJrrbx8B1WTPu7Z/yul+XieaeBIQvSHvUn99F1095/8QmgFbZk/rgAAAABJRU5ErkJggg=='>
-		<image id='test' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAUElEQVQoke2SMQ4AIAwCof//Mw7aaBqNrbPMHDBAAJKEF5kkkLwadx5Dr77C7llDLL1xgGtRCY7tJTiGPMGuD1fhzDWPcPbbUSTntysBftMGTkIfHcSvlwsAAAAASUVORK5CYII='>
-		<image id='castle' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAc0lEQVQokZWSSw7AIAgFH6b3v/J0YTBCtYG3EZThoxqACjIzeajbJgkgHP4l0ASmL2kRxSaWhgNdUJLGrbWK/eQNn79iG0Dlstptt2AH9zUn2/1P5T0ICLPmNcDdZ7tWPiknDz+sq2Nln/XmL/gUeFOOewE40F8FrTHzggAAAABJRU5ErkJggg=='>
-		<image id='dragon' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAfUlEQVQokZWSSQ7AMAgDIer/vzy9lMhkpZxQBBNj2QHc3QCLcner1LN6BDogeoVHtd1vOqwwnW/jw01BzAF5WQEK2p3gfF3VJAW0kVwFmNks+wZI53CYXp0yyf5Tauhy+WSeCk0Jqxin4JQwYLt4jOeO3gOxSp+6XQmKKngBGAleG4oxEIwAAAAASUVORK5CYII='>
-		<image id='kirby' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAeklEQVQokZ1TQQ7AIAgDsv9/uTtMTGHgdFw0hVJAVACQYarqVyE4+Bi/2JkJbO7jONshdmanBACzBftS9UCex1T+U66rH5cdlHdU+DwiL5V5ENVQMh7uAFBtT2cca0zqlCuiyFhPfutVgryi+mDvcnOS6qOEnrvgzn8DLK5SGEDj98sAAAAASUVORK5CYII='>
-		<image id='poulpe' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAe0lEQVQokZVTSRLAIAhLmP7/y/RSLTKJo5w0EMKiBJCZCZK4NQJI5cj8YZc4VHA9j3vHpLIKWgilijghOIueTSk4TPbc7yQX4vBFDVDW8brWxyk7Izljie+RnBKrWNxMuu976XnXtxqYfSS1N1XyolxBRVCVTOXdR3C+FyQIVA/q/xrzAAAAAElFTkSuQmCC'>
-	<div>
+		<div id='stock_image'>
+			<canvas id='traitement_img'></canvas>
+			<image id='dog' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAe0lEQVQokaVS0QoAIQjb5P7/l72XM5Y1uEiIci1dKjIzAYxVvtuVx++AMpJQ3+EkEZ20e+jwyEyQnCKqv8NKxZL5xJhO5w97bFSR6eLHjlwParmgocCucB3TfZHdFThsZD6tWfEn2XrR/9ynC5BWFVAkV20d06s+X03YCxGXbP4lGIHVAAAAAElFTkSuQmCC'>
+			<image id='source' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAKElEQVQokWNkZmb+/+fPHwZyAOP/////k6WTgYGBiVyNo5pHNQ9nzQCgDwgVpkxwIgAAAABJRU5ErkJggg=='>
+			<image id='lapin' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAgklEQVQokZ1SQQ7DMAwCa/9/ctihy2QzpnTjUtnGQJMQgPAnCgAkQTprOI9X73dzkpezN7/VPqsRg4SkN6nXKd1wdmKvu+DGozv0hS6YIg/ntHA6SOJ1z+7oSAmqD07fW7FjRBJrrbx8B1WTPu7Z/yul+XieaeBIQvSHvUn99F1095/8QmgFbZk/rgAAAABJRU5ErkJggg=='>
+			<image id='test' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAUElEQVQoke2SMQ4AIAwCof//Mw7aaBqNrbPMHDBAAJKEF5kkkLwadx5Dr77C7llDLL1xgGtRCY7tJTiGPMGuD1fhzDWPcPbbUSTntysBftMGTkIfHcSvlwsAAAAASUVORK5CYII='>
+			<image id='castle' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAc0lEQVQokZWSSw7AIAgFH6b3v/J0YTBCtYG3EZThoxqACjIzeajbJgkgHP4l0ASmL2kRxSaWhgNdUJLGrbWK/eQNn79iG0Dlstptt2AH9zUn2/1P5T0ICLPmNcDdZ7tWPiknDz+sq2Nln/XmL/gUeFOOewE40F8FrTHzggAAAABJRU5ErkJggg=='>
+			<image id='dragon' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAfUlEQVQokZWSSQ7AMAgDIer/vzy9lMhkpZxQBBNj2QHc3QCLcner1LN6BDogeoVHtd1vOqwwnW/jw01BzAF5WQEK2p3gfF3VJAW0kVwFmNks+wZI53CYXp0yyf5Tauhy+WSeCk0Jqxin4JQwYLt4jOeO3gOxSp+6XQmKKngBGAleG4oxEIwAAAAASUVORK5CYII='>
+			<image id='kirby' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAeklEQVQokZ1TQQ7AIAgDsv9/uTtMTGHgdFw0hVJAVACQYarqVyE4+Bi/2JkJbO7jONshdmanBACzBftS9UCex1T+U66rH5cdlHdU+DwiL5V5ENVQMh7uAFBtT2cca0zqlCuiyFhPfutVgryi+mDvcnOS6qOEnrvgzn8DLK5SGEDj98sAAAAASUVORK5CYII='>
+			<image id='poulpe' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAe0lEQVQokZVTSRLAIAhLmP7/y/RSLTKJo5w0EMKiBJCZCZK4NQJI5cj8YZc4VHA9j3vHpLIKWgilijghOIueTSk4TPbc7yQX4vBFDVDW8brWxyk7Izljie+RnBKrWNxMuu976XnXtxqYfSS1N1XyolxBRVCVTOXdR3C+FyQIVA/q/xrzAAAAAElFTkSuQmCC'>
+		</div>
+	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.session.js"></script>

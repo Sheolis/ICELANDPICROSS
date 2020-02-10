@@ -1,12 +1,26 @@
 
+body{
+	background-color: #F1F1D6;
+	display: flex;
+	flex-direction: row;
+}
+
+#partie_texte{
+	width: 570px;
+	font-family: 'Iceland', cursive;
+	font-size: 20px;
+}
+
 #Picross{
+	margin-top: 50px;
+	margin-left: 50px;
 	float: left;
-	width: 520px ;
-	height: 750px;
+	width: 550px ;
+	height: 455px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+
 	font-family: 'Iceland', cursive;
 	font-size: 20px;
 
@@ -100,11 +114,11 @@
 
 /* État */
 .correct{
-	background-color: #5D084F;
+	background-color: #0F0019;
 }
 
 .faux{
-	background-color: #FFB2B2 ;
+	background-color: #FF2200 ;
 }
 
 .annotation1{
@@ -112,7 +126,7 @@
 }
 
 .annotation2{
-	background-color: #8AD380 ;
+	background-color: #7389A9 ;
 }
 
 #erreurs{
@@ -144,4 +158,14 @@
 
 #stock_image{
 	display: none;
+}
+
+#exemple{
+	display: flex;
+	flex-direction: row;
+}
+
+#exemple_ligne{
+	display: flex;
+	flex-direction: row;
 }
